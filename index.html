@@ -2367,10 +2367,7 @@
             const [isGoalsExpanded, setIsGoalsExpanded] = useState(false);
             const [isTutorialsExpanded, setIsTutorialsExpanded] = useState(false);
             const [isBookingsExpanded, setIsBookingsExpanded] = useState(false);
-            const [completedItems, setCompletedItems] = useState(() => {
-                const saved = localStorage.getItem('busan-trip-records');
-                return saved ? JSON.parse(saved) : {};
-            });
+
 
             const [remarks, setRemarks] = useState(() => {
                 const saved = localStorage.getItem('busan-trip-remarks');
@@ -2388,9 +2385,7 @@
                 }, 0);
             }, []);
 
-            useEffect(() => {
-                localStorage.setItem('busan-trip-records', JSON.stringify(completedItems));
-            }, [completedItems]);
+
 
             // 獲取釜山天氣預報 (Open-Meteo API - 免費無需 API Key)
             useEffect(() => {
@@ -2428,13 +2423,7 @@
                 return `${date.getMonth() + 1}/${date.getDate()}`;
             };
 
-            const toggleItem = (dayIndex, itemKey) => {
-                const key = `day-${dayIndex}-${itemKey}`;
-                setCompletedItems(prev => ({
-                    ...prev,
-                    [key]: !prev[key]
-                }));
-            };
+
 
             const handleRemarkChange = (dayIndex, itemKey, text) => {
                 const key = `day-${dayIndex}-${itemKey}`;
@@ -2471,34 +2460,24 @@
 
             const ScheduleItem = ({ label, content, iconName, color, itemKey, fixedRemark }) => {
                 if (!content) return null;
-                const isDone = completedItems[`day-${activeDay}-${itemKey}`];
                 const remarkKey = `day-${activeDay}-${itemKey}`;
                 const remark = remarks[remarkKey] || '';
                 const styles = colorMap[color] || colorMap.blue;
 
                 return (
                     <div
-                        className={`mb-4 p-4 rounded-xl border-l-4 transition-all duration-300 touch-feedback cursor-pointer ${isDone ? 'bg-gray-50 border-gray-300 opacity-60' : `bg-white ${styles.border} shadow-sm`
-                            }`}
-                        onClick={() => toggleItem(activeDay, itemKey)}
+                        className={`mb-4 p-4 rounded-xl border-l-4 transition-all duration-300 bg-white ${styles.border} shadow-sm`}
                     >
                         <div className="flex items-start gap-3">
-                            <div className="mt-1 flex-shrink-0">
-                                {isDone ? (
-                                    <LucideIcon name="circle-check" className="w-5 h-5 text-green-500" />
-                                ) : (
-                                    <LucideIcon name="circle" className={`w-5 h-5 ${styles.text}`} />
-                                )}
-                            </div>
                             <div className="flex-1 min-w-0">
-                                <div className={`flex items-center gap-2 mb-1 text-xs font-bold uppercase tracking-wider ${isDone ? 'text-gray-400' : 'text-gray-500'}`}>
+                                <div className="flex items-center gap-2 mb-1 text-xs font-bold uppercase tracking-wider text-gray-500">
                                     <LucideIcon name={iconName} className="w-4 h-4" />
                                     {label}
                                 </div>
-                                <div className={`text-base leading-relaxed break-words ${isDone ? 'line-through text-gray-400' : 'text-gray-800 font-semibold'}`}>
+                                <div className="text-base leading-relaxed break-words text-gray-800 font-semibold">
                                     {content}
                                 </div>
-                                <div className="mt-3 relative" onClick={(e) => e.stopPropagation()}>
+                                <div className="mt-3 relative">
                                     {fixedRemark ? (
                                         <div className="w-full text-sm p-3 rounded-lg border bg-gray-100 border-gray-200 text-gray-500 italic select-text cursor-text whitespace-pre-wrap">
                                             {fixedRemark}
@@ -2508,10 +2487,7 @@
                                             value={remark}
                                             onChange={(e) => handleRemarkChange(activeDay, itemKey, e.target.value)}
                                             placeholder="備註..."
-                                            className={`w-full text-sm p-3 rounded-lg border focus:ring-2 focus:outline-none transition-all resize-none overflow-hidden ${isDone
-                                                ? 'bg-gray-100/50 border-gray-200 text-gray-500 placeholder-gray-400'
-                                                : 'bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-300 focus:ring-blue-100 text-gray-700'
-                                                }`}
+                                            className="w-full text-sm p-3 rounded-lg border focus:ring-2 focus:outline-none transition-all resize-none overflow-hidden bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-300 focus:ring-blue-100 text-gray-700"
                                             rows={Math.max(1, remark.split('\n').length)}
                                             style={{ minHeight: '44px' }}
                                         />
@@ -2523,11 +2499,10 @@
                 );
             };
 
-            const doneCount = Object.values(completedItems).filter(Boolean).length;
-            const progressPercent = Math.min(100, (doneCount / totalItemsCount) * 100);
+
 
             return (
-                <div className="min-h-screen bg-slate-50 font-sans pb-28">
+                <div className="min-h-screen bg-slate-50 font-sans pb-10">
                     {/* Top Header */}
                     <header className={`bg-blue-600 text-white shadow-lg sticky top-0 z-30 transition-all duration-300 ${isScrolled ? 'rounded-b-xl py-2' : 'rounded-b-[2rem]'}`}>
                         <div className={`flex items-center gap-3 transition-all duration-300 ${isScrolled ? 'px-4' : 'p-5'}`}>
@@ -3007,34 +2982,9 @@
                                         <LucideIcon name="cloud-rain" className="w-24 h-24" />
                                     </div>
                                 </div>
-
-                                {/* Tips Footer */}
-                                <div className="mt-12 mb-10 text-center">
-                                    <div className="inline-block p-4 bg-gray-200/50 rounded-2xl text-gray-500 text-[11px] leading-relaxed max-w-[260px] font-medium">
-                                        ✨ 貼心提示：點擊任何行程區塊即可標記完成。紀錄會自動儲存於此設備。
-                                    </div>
-                                </div>
                             </>
                         )}
                     </main>
-
-                    {/* Bottom Progress Bar */}
-                    <div className="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-gray-100 p-4 safe-bottom flex flex-col gap-2 px-6 z-40">
-                        <div className="flex items-center justify-between mb-1">
-                            <div className="flex items-center gap-2 text-[11px] font-bold text-gray-400 tracking-wider">
-                                行程總進度
-                            </div>
-                            <div className="text-xs font-black text-blue-600">
-                                {doneCount} / {totalItemsCount} 已完成
-                            </div>
-                        </div>
-                        <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden border border-gray-50">
-                            <div
-                                className="h-full bg-gradient-to-r from-blue-500 to-green-400 transition-all duration-700 ease-out rounded-full"
-                                style={{ width: `${progressPercent}%` }}
-                            />
-                        </div>
-                    </div>
                 </div>
             );
         };
