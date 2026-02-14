@@ -205,7 +205,7 @@
                     "早餐": "飯店附近簡單吃",
                     "早餐備註": "飯店附近購買早餐 / Egg Drop海雲台店(早上8：00開始營業)",
                     "上午行程": "松島海上纜車 (停留 2 小時 / VBP B組) ➔ 龍宮雲橋",
-                    "上午行程備註": "松島海上纜車 建議搭乘水晶車廂 (Crystal Cruise)，使用VBP B區。售票口馬路對面，步行約 30 秒，有24 小時無人拍照，可拍新聞頭版照和 Flipbook 手翻書 https://ppt.cc/fH1HPx\n松島龍宮雲橋 現場購票 ₩1,000\n纜車營業狀況查詢 https://ppt.cc/flPgQx",
+                    "上午行程備註": "松島海上纜車 建議搭乘水晶車廂 (Crystal Cruise)，使用VBP B區。售票口馬路對面，步行約 30 秒，有24 小時無人拍照，可拍新聞頭版照和 Flipbook 手翻書 https://ppt.cc/fH1HPx\n松島海上纜車 KKday需一天前購票 https://ppt.cc/fG1nex，現場購買大約多₩1,000\nAir Cruise 一般車廂（來回）兒童239、成人348\nCrystal Cruise 水晶車廂（來回）兒童326、成人457\n松島龍宮雲橋 現場購票 ₩1,000\n纜車營業狀況查詢 https://ppt.cc/flPgQx",
                     "午餐": "西面商圈 (機張刀削麵 或 豬肉湯飯)",
                     "午餐備註": "機張刀削麵 西面地區非常有名的在地美食，以Q彈的手工麵條和海苔飯捲聞名\n松亭3代豬肉湯飯 釜山西面地區一家非常有名且歷史悠久的豬肉湯飯老店，以其24小時營業和道地美味的豬肉湯飯而聞名",
                     "下午行程": "Running Man 體驗館 (停留 1.5 小時 / VBP B組) ➔ 西面地下街 / 田浦咖啡街",
@@ -262,7 +262,7 @@
                     "早餐": "Working Holiday Brunch Cafe (海景早午餐)",
                     "早餐備註": "早上8：00開始營業。海景第一排,假日拿鐵和法式吐司都厲害",
                     "上午行程": "MUSEUM 1 (停留 1.5 小時 / VBP B組)",
-                    "上午行程備註": "現代藝術博物館。KKDAY購票 成人313，小孩226 https://ppt.cc/fLCA3x",
+                    "上午行程備註": "現代藝術博物館。VBP B組 ₩18000，KKDAY購票 成人313，小孩226 https://ppt.cc/fLCA3x",
                     "午餐": "新世界百貨 Centum City 美食街 (自由選擇)",
                     "午餐備註": "自由選擇想要吃什麼種類的美食",
                     "下午行程": "新世界百貨(含藍瓶咖啡) ➔ Spa Land 汗蒸幕 (VBP A組)",
@@ -2391,6 +2391,7 @@
             const [isGoalsExpanded, setIsGoalsExpanded] = useState(false);
             const [isTutorialsExpanded, setIsTutorialsExpanded] = useState(false);
             const [isBookingsExpanded, setIsBookingsExpanded] = useState(false);
+            const [isPendingExpanded, setIsPendingExpanded] = useState(false);
 
 
             const [remarks, setRemarks] = useState(() => {
@@ -2871,7 +2872,7 @@
                                         <div className="px-5 pb-5 space-y-2 text-sm">
                                             <a href="https://www.klook.com/zh-TW/airport-transfers/service/pus-gimhae-international-airport/" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-blue-50 p-3 rounded-xl border border-blue-100 hover:bg-blue-100 transition-colors">
                                                 <span className="text-lg">🚐</span>
-                                                <span className="text-blue-700 font-medium">KLOOK 金海國際機場接送＆交通 舒適車型 13 人座 $3,346</span>
+                                                <span className="text-blue-700 font-medium">KLOOK 金海國際機場接送＆交通 舒適車型 13 人座 $3,538 * 2（至少一個月前訂購）</span>
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/18161-t-money-public-transit-card-pick-up-at-taiwan-taoyuan-international-airport-south-korea?cid=5837" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-orange-50 p-3 rounded-xl border border-orange-100 hover:bg-orange-100 transition-colors">
                                                 <span className="text-lg">💳</span>
@@ -2879,15 +2880,15 @@
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions?cid=15944" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-purple-50 p-3 rounded-xl border border-purple-100 hover:bg-purple-100 transition-colors">
                                                 <span className="text-lg">🎫</span>
-                                                <span className="text-purple-700 font-medium">韓國釜山通行證 VISIT BUSAN PASS BIG5 $1,409</span>
+                                                <span className="text-purple-700 font-medium">韓國釜山通行證 VISIT BUSAN PASS BIG5 $1,415（至少一個月前訂購）</span>
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/123012-haeundae-blueline-park-sky-capsule-beach-train-ticket?cid=2636" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-cyan-50 p-3 rounded-xl border border-cyan-100 hover:bg-cyan-100 transition-colors">
                                                 <span className="text-lg">🚃</span>
-                                                <span className="text-cyan-700 font-medium">韓國釜山｜海雲台藍線公園海岸列車・天空膠囊列車票</span>
+                                                <span className="text-cyan-700 font-medium">韓國釜山｜海雲台藍線公園海岸列車・天空膠囊列車票（至少一個月前搶票）</span>
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/19674-busan-air-cruise-songdo-marine-cable-car-ticket-south-korea?cid=7635&groupOid=88" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-teal-50 p-3 rounded-xl border border-teal-100 hover:bg-teal-100 transition-colors">
                                                 <span className="text-lg">🚡</span>
-                                                <span className="text-teal-700 font-medium">韓國釜山｜松島海上纜車來回門票</span>
+                                                <span className="text-teal-700 font-medium">韓國釜山｜松島海上纜車來回門票 $457（需一天前購票）</span>
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/105514-busan-x-the-sky-observatory-ticket-haeundae?cid=7635" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-indigo-50 p-3 rounded-xl border border-indigo-100 hover:bg-indigo-100 transition-colors">
                                                 <span className="text-lg">🏙️</span>
@@ -2895,7 +2896,7 @@
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/12213-busan-spa-land-centum-city-ticket?cid=7635" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-pink-50 p-3 rounded-xl border border-pink-100 hover:bg-pink-100 transition-colors">
                                                 <span className="text-lg">🧖</span>
-                                                <span className="text-pink-700 font-medium">韓國釜山汗蒸幕推薦｜新世界 SPA LAND 汗蒸幕入場券 $442, 4Hr</span>
+                                                <span className="text-pink-700 font-medium">韓國釜山｜新世界 SPA LAND 汗蒸幕入場券 $442, 4Hr（即買即用）</span>
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/158792?cid=7635" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-blue-50 p-3 rounded-xl border border-blue-100 hover:bg-blue-100 transition-colors">
                                                 <span className="text-lg">🏖️</span>
@@ -2907,12 +2908,51 @@
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/35943?cid=3693&ud1=Museum1" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-violet-50 p-3 rounded-xl border border-violet-100 hover:bg-violet-100 transition-colors">
                                                 <span className="text-lg">🎭</span>
-                                                <span className="text-violet-700 font-medium">釜山 Museum 1 &lt;Again, Übermensch&gt; 門票</span>
+                                                <span className="text-violet-700 font-medium">韓國釜山｜Museum 1 &lt;Again, Übermensch&gt; 門票 $313（即買即用）</span>
                                             </a>
                                             <a href="https://www.kkday.com/zh-tw/product/19378?cid=5259&groupOid=88" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center bg-amber-50 p-3 rounded-xl border border-amber-100 hover:bg-amber-100 transition-colors">
                                                 <span className="text-lg">🗼</span>
-                                                <span className="text-amber-700 font-medium">釜山塔展望台電子門票</span>
+                                                <span className="text-amber-700 font-medium">釜山塔展望台電子門票 $235（即買即用）</span>
                                             </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                {/* 待訂購及待預約 */}
+                                <div className="bg-white rounded-3xl shadow-sm border border-gray-100 mb-6 overflow-hidden">
+                                    <div
+                                        className="p-5 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors"
+                                        onClick={() => setIsPendingExpanded(!isPendingExpanded)}
+                                    >
+                                        <div className="flex items-center gap-2 text-cyan-600 font-black">
+                                            <span className="text-xl">📋</span>
+                                            <span>待訂購及待預約</span>
+                                            <span className="text-xs bg-cyan-100 text-cyan-600 px-2 py-0.5 rounded-full">11項</span>
+                                        </div>
+                                        <div className={`transition-transform duration-300 ${isPendingExpanded ? 'rotate-180' : ''}`}>
+                                            <LucideIcon name="chevron-down" className="w-5 h-5 text-gray-400" />
+                                        </div>
+                                    </div>
+                                    <div className={`overflow-hidden transition-all duration-300 ${isPendingExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                        <div className="px-5 pb-5 space-y-2 text-sm text-gray-700">
+                                            {[
+                                                "01. KLOOK預定 6/26 金海國際機場接送-舒適車型 13 人座 NT$3,538",
+                                                "02. 韓國釜山實體通行證 VISIT BUSAN PASS BIG5 * 9 = NT$1,415 * 9 = NT$12,735",
+                                                "03. KKday預定 6/28 海雲台天空膠囊列車票（5/20開始注意購票）2人座NT$870、3人座NT$979、4人座1088 = NT$2,937",
+                                                "04. 松島海上纜車來回門票（需一天前購票）NT3,851",
+                                                "05. 新世界 SPA LAND 汗蒸幕入場券（即買即用）NT$442 * 9 = NT3,978",
+                                                "06. 釜山 Museum 1 <Again, Übermensch> 門票 NT$2,713",
+                                                "07. 釜山塔展望台電子門票 NT$1997",
+                                                "08. KLOOK預定 7/3 金海國際機場接送-舒適車型 13 人座 NT$3,538",
+                                                "09. Naver預約 6/28 高飯 (海雲台店)",
+                                                "10. Naver預約 6/28 味贊王鹽烤肉",
+                                                "11. 預約7/1 那家韓牛 (海雲台)"
+                                            ].map((item, index) => (
+                                                <div key={index} className="flex gap-2 items-start bg-cyan-50 p-3 rounded-xl border border-cyan-100">
+                                                    <span className="font-medium">{item}</span>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
