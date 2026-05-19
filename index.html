@@ -670,7 +670,7 @@
                     </div>
 
                     <div className="text-[11px] text-gray-500 mb-4 px-1 flex-shrink-0">
-                        <div className="mb-1 text-gray-600">1外幣折台幣 | JPY: {exchangeRates?.rates?.JPY ? (1 / exchangeRates.rates.JPY).toFixed(4) : '-'} | USD: {exchangeRates?.rates?.USD ? (1 / exchangeRates.rates.USD).toFixed(2) : '-'} | NOK: {exchangeRates?.rates?.NOK ? (1 / exchangeRates.rates.NOK).toFixed(2) : '-'}</div>
+                        <div className="mb-1 text-gray-600">1外幣折台幣 | JPY: {exchangeRates?.rates?.JPY ? (1 / exchangeRates.rates.JPY).toFixed(4) : '-'} | USD: {exchangeRates?.rates?.USD ? (1 / exchangeRates.rates.USD).toFixed(2) : '-'} | KRW: {exchangeRates?.rates?.KRW ? (1 / exchangeRates.rates.KRW).toFixed(2) : '-'}</div>
                         <div>最後更新 : {exchangeRates?.lastUpdate || '載入中...'}</div>
                     </div>
 
@@ -700,7 +700,7 @@
                             <div className="flex-1">
                                 <label className="block text-xs font-bold text-gray-600 mb-1">幣別</label>
                                 <select value={form.currency} onChange={e => setForm({ ...form, currency: e.target.value })} className="w-full p-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-amber-400 bg-white">
-                                    {currencies.map(c => <option key={c} value={c}>{c === 'TWD' ? 'TWD 台幣' : c === 'JPY' ? 'JPY 日圓' : c === 'KRW' ? 'KRW 韓圓' : c === 'EUR' ? 'EUR 歐元' : c === 'GBP' ? 'GBP 英鎊' : c === 'THB' ? 'THB 泰幣' : c === 'CNY' ? 'CNY 人民幣' : c === 'HKD' ? 'HKD 港幣' : c === 'USD' ? 'USD 美金' : 'NOK 挪威克朗'}</option>)}
+                                    {currencies.map(c => <option key={c} value={c}>{c === 'KRW' ? 'KRW 韓圓' : c === 'TWD' ? 'TWD 台幣' : c === 'JPY' ? 'JPY 日圓' : c === 'EUR' ? 'EUR 歐元' : c === 'GBP' ? 'GBP 英鎊' : c === 'THB' ? 'THB 泰幣' : c === 'CNY' ? 'CNY 人民幣' : c === 'HKD' ? 'HKD 港幣' : c === 'USD' ? 'USD 美金' : 'NOK 挪威克朗'}</option>)}
                                 </select>
                             </div>
                         </div>
