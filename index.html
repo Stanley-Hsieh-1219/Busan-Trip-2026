@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
@@ -625,8 +625,8 @@
         };
 
         const ExpensePage = ({ expenses, setExpenses, exchangeRates, fetchExchangeRates }) => {
-            const [form, setForm] = useState({ date: '', location: '', item: '', amount: '', currency: 'TWD' });
-            const currencies = ['TWD', 'JPY', 'KRW', 'EUR', 'GBP', 'THB', 'CNY', 'HKD', 'USD', 'NOK'];
+            const [form, setForm] = useState({ date: '', location: '', item: '', amount: '', currency: 'KRW' });
+            const currencies = ['KRW', 'TWD', 'JPY', 'EUR', 'GBP', 'THB', 'CNY', 'HKD', 'USD', 'NOK'];
 
             const handleSubmit = (e) => {
                 e.preventDefault();
