@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
@@ -16,6 +16,10 @@
 
     <!-- Babel for JSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         /* 隱藏捲軸 */
         .no-scrollbar::-webkit-scrollbar {
@@ -148,7 +152,7 @@
                     "上午行程": null,
                     "午餐": null,
                     "下午行程": "19:00 抵達金海機場 (CI 186) ➔ 接機專車前往海雲台飯店 Check-in",
-                    "下午行程備註": "KLOOK預定金海國際機場接送-舒適車型 13 人座 (司機將自航班實際落地時間起免費等候1小時30分鐘; 1號門附近, 入境大廳外)\n出關後，先去 機場一樓三號那邊的 WiFi 櫃台領VBP實體卡 (WiFi Dosirak; Gimhae Airport First floor Exit 3; 06:00~22:00)",
+                    "下午行程備註": "KLOOK預定金海國際機場接送-舒適車型 13 人座 (司機將自航班實際落地時間起免費等候1小時30分鐘; 1號門附近, 入境大廳外)\n出關後，先去 機場一樓三號那邊的 WiFi 櫃台領VBP實體卡 (WiFi Dosirak; Gimhae Airport First floor Exit 3; 06:00~22:00)\n從 金海機場 到 海雲台飯店 車程大約40分鐘",
                     "晚餐": "密陽血腸豬肉湯飯 (海雲台店) - 24小時營業",
                     "晚餐備註": "嚴湧帛豬肉湯飯海雲台店 or 飯店附近餐廳",
                     "晚上行程": "飯店休息",
@@ -163,15 +167,15 @@
                     "早餐": "超商簡易早餐",
                     "早餐備註": "超商早餐或是飯店附近\n若昨天在機場沒有領到VBP，去\"海雲台紀念品店\"領取(09:30-20:30)\n可以到飯店對面的\"MONEY BOX\"換韓圜(六~日09:00-19:00、一~五09:00-21:00)",
                     "上午行程": "甘川洞文化村 (停留 2.5 小時 / 計程車)",
-                    "上午行程備註": "8點半前從飯店出發\n衣裳貸與(Ibgogage) 韓服體驗 (先跟店家聯絡9人預約)\n小王子拍照：📰 第一站｜直奔經典小王子，位置在 甘川時報 對面，⚠️ 一定要先拍報紙，再排隊小王子。🌙 第二站｜回程去新小王子（隱藏版）📍 Gamnae Byeolmaru 體育中心 ➡️ 回程時上 3 樓室外平台 ✔️ 從貓貓壁畫旁的小路上去，會比較捷徑 https://ppt.cc/fL0edx",
-                    "午餐": "南浦洞商圈 (推薦：李在模披薩 或 洪祖豬腳)",
+                    "上午行程備註": "8點半前從飯店出發，從 海雲台飯店 到 甘川文化村 車程大約40分鐘\n衣裳貸與(Ibgogage) 韓服體驗 (先跟店家聯絡9人預約)\n小王子拍照：📰 第一站｜直奔經典小王子，位置在 甘川時報 對面，⚠️ 一定要先拍報紙，再排隊小王子。🌙 第二站｜回程去新小王子（隱藏版）📍 Gamnae Byeolmaru 體育中心 ➡️ 回程時上 3 樓室外平台 ✔️ 從貓貓壁畫旁的小路上去，會比較捷徑 https://ppt.cc/fL0edx",
+                    "午餐": "從 甘川文化村 到 老奶奶伽倻小麥冷麵 車程大約10分鐘\n南浦洞商圈 (推薦：李在模披薩 或 洪祖豬腳)",
                     "午餐備註": "李在模披薩 or 洪祖豬腳 or 老奶奶伽倻小麥冷麵",
                     "下午行程": "14:00 影島大橋開橋秀、BIFF 廣場 ➔ 往廣安里",
-                    "下午行程備註": "BIFF廣場糖餅\n若還沒有領到VBP，去BIFF廣場的\"OLIVE YOUNG 光復店\"領取(11:00-22:00)",
+                    "下午行程備註": "BIFF廣場糖餅\n若還沒有領到VBP，去BIFF廣場的\"OLIVE YOUNG 光復店\"領取(11:00-22:00)\n從 BIFF廣場 到 Nasari食堂 車程大約30分鐘",
                     "晚餐": "Nasari 食堂 (나사리식당) - 廣安里海景配海鮮麵",
                     "晚餐備註": "廣安里餐廳",
                     "晚上行程": "20:00 廣安里 M 無人機燈光秀 ➔ 逛 Millac the Market",
-                    "晚上行程備註": "無人機表演每週六2場，約10分鐘左右 - 夏季(3~9月) 20:00、22:00 & 冬季(10~2月) 19:00、21:00\n觀賞位置大約在\"星巴克對面的海灘\"，會是直接在沙灘正中間\n官網資訊 https://ppt.cc/fPoIBx",
+                    "晚上行程備註": "無人機表演每週六2場，約10分鐘左右 - 夏季(3~9月) 20:00、22:00 & 冬季(10~2月) 19:00、21:00\n觀賞位置大約在\"星巴克對面的海灘\"，會是直接在沙灘正中間\n官網資訊 https://ppt.cc/fPoIBx\n從 Nasari食堂 到 海雲台飯店 車程大約15分鐘",
                     "雨天備案": "上午改往釜山電影體驗博物館，下午改逛樂天百貨光復店室內。"
                 },
                 {
@@ -181,16 +185,16 @@
                     "安排理由": "上午先去搭乘纜車，下午再去Running Man體驗館與漫步西面。",
                     "早餐": "飯店附近簡單吃",
                     "早餐備註": "飯店附近購買早餐 / Egg Drop海雲台店(早上8：00開始營業)",
-                    "上午行程": "松島海上纜車 (停留 2 小時 / VBP B組) ➔ 龍宮雲橋",
+                    "上午行程": "從 海雲台飯店 到 松島海上纜車 車程大約30分鐘\n松島海上纜車 (停留 2 小時 / VBP B組) ➔ 龍宮雲橋",
                     "上午行程備註": "松島海上纜車 (09:00-21:00) 建議搭乘水晶車廂 (Crystal Cruise)，使用VBP B區。售票口馬路對面，步行約 30 秒，有24 小時無人拍照，可拍新聞頭版照和 Flipbook 手翻書 https://ppt.cc/fH1HPx\n松島海上纜車 透過KKday需一天前購票 https://ppt.cc/fG1nex，現場購買大約多₩1,000\nAir Cruise 一般車廂（來回）兒童239、成人348\nCrystal Cruise 水晶車廂（來回）兒童326、成人457\n松島龍宮雲橋 現場購票 ₩1,000\n纜車營業狀況查詢 https://ppt.cc/flPgQx",
                     "午餐": "西面商圈 (機張刀削麵 或 豬肉湯飯)",
-                    "午餐備註": "機張刀削麵 西面地區非常有名的在地美食，以Q彈的手工麵條和海苔飯捲聞名\n松亭3代豬肉湯飯 釜山西面地區一家非常有名且歷史悠久的豬肉湯飯老店，以其24小時營業和道地美味的豬肉湯飯而聞名",
+                    "午餐備註": "松島海上纜車 到 機張刀削麵 車程大約30分鐘\n機張刀削麵 西面地區非常有名的在地美食，以Q彈的手工麵條和海苔飯捲聞名\n松亭3代豬肉湯飯 釜山西面地區一家非常有名且歷史悠久的豬肉湯飯老店，以其24小時營業和道地美味的豬肉湯飯而聞名",
                     "下午行程": "Running Man 體驗館 (停留 1.5 小時 / VBP B組) ➔ 西面地下街 / 田浦咖啡街",
                     "下午行程備註": "Running Man體驗館 會比較耗體力 (11:00-20:00, 心得介紹https://ppt.cc/fMsUlx)，若不想玩的話，可以到附近的咖啡廳休息或是西面地下街逛街，VBP B區的額度可以保留到Day 7 MUSEUM 1使用",
                     "晚餐": "推薦：三五亭蔘雞湯 (口味溫和補氣) 或 玄風雞絲刀切麵",
                     "晚餐備註": "三五亭 (삼오정)雞肉軟嫩、湯頭清甜 11:00–15:00、16:30–21:00\n玄風雞絲刀切麵 人蔘雞腿（泡在湯和飯裡面）₩11500、\"泡菜蒸餃₩5000，份量超多，根本吃不完。店員會走過來問你，要不要加泡菜和醃蘿蔔。桌上有一台機器，自己點餐和結帳，可以刷卡",
                     "晚上行程": "西面商圈逛街",
-                    "晚上行程備註": "漫步西面、搭車返回海雲台飯店",
+                    "晚上行程備註": "漫步西面、搭車返回海雲台飯店\n從 Running Man 體驗館 到 海雲台飯店 車程大約30分鐘",
                     "雨天備案": "西面地下街與百貨公司均為室內，行程影響較小。"
                 },
                 {
@@ -200,7 +204,7 @@
                     "安排理由": "午餐選用清爽鱈魚湯平衡前一日的重口味；晚餐安排烤肉。",
                     "早餐": "OPS 烘培屋 海雲台店 (08:00 開)",
                     "早餐備註": "買麵包當早餐",
-                    "上午行程": "海雲台藍線公園 (停留 2.5 小時 / VBP B組：海岸列車 / 膠囊小火車需預約)",
+                    "上午行程": "從 OPS 烘培屋 海雲台店 到 海雲台藍線公園 步行大約20分鐘\n海雲台藍線公園 (停留 2.5 小時 / VBP B組：海岸列車 / 膠囊小火車需預約)",
                     "上午行程備註": "要搭乘\"膠囊小火車\"，須提前1個月於官網預約訂票。尾浦->青沙浦 可以面對海。\"海岸列車\"可以使用VBP B區或是購買單程票₩8,000、來回票₩12,000。青沙浦天空步道 可以經過韓國版灌籃高手平交道",
                     "午餐": "瓦房鱈魚湯 (清爽鮮甜適合長輩)",
                     "午餐備註": "餐廳就只賣這一道，清澈湯底搭配超多的魚肉量，以及可續小菜\n另一個選擇是『巨松』燉排骨，有自助吧台，可以自己添加小菜，「燉排骨」有牛、豬可選，也能調整辣度，或是點完全不辣的",
@@ -219,7 +223,7 @@
                     "安排理由": "全日活動量大，午晚餐在 Outlet 解決，可自由選擇非韓式料理。",
                     "早餐": "Egg Drop (海雲台店) - 08:00 開",
                     "早餐備註": "早上8：00開始營業。國民歐姆蛋三明治品牌，採用自助點餐方式，機器上也有提供中文",
-                    "上午行程": "海東龍宮寺 (停留 1.5 小時) ➔ 釜山斜坡滑車 Skyline Luge (VBP A組)",
+                    "上午行程": "從 Egg Drop (海雲台店) 到 海東龍宮寺 車程大約20分鐘\n海東龍宮寺 (停留 1.5 小時) ➔ 釜山斜坡滑車 Skyline Luge (VBP A組)",
                     "上午行程備註": "海東龍宮寺於韓國釜山的一座著名臨海佛寺，以其美麗的海景和觀音信仰聞名\nSkyline Luge VBP A區 可以玩兩回。單購3回券 - ₩33,000，VBP 3回券 20%折扣",
                     "午餐": "樂天 Outlet 美食街 (自由選擇)",
                     "午餐備註": "美食街各自選擇喜歡的餐點用餐",
@@ -228,7 +232,7 @@
                     "晚餐": "樂天 Outlet 內餐廳",
                     "晚餐備註": "豐元莊鄉村飯館 - 對於韓式定食有興趣的話可以試試，所謂韓式定食可以說是擺滿整桌的套餐，多種小菜以及家常料理，很適合家庭或多人聚餐；或者是選擇 火鍋、炸豬排餐廳",
                     "晚上行程": "回飯店整理伴手禮",
-                    "晚上行程備註": "優閒逛街、搭車返回海雲台飯店",
+                    "晚上行程備註": "優閒逛街、搭車返回海雲台飯店\n從 樂天 Outlet 到 海雲台飯店 車程大約20分鐘",
                     "雨天備案": "國立釜山科學館、釜山 Brick Campus 積木樂園 (室內 / VBP B組) 或 樂天 Outlet 室內購物。"
                 },
                 {
@@ -239,13 +243,13 @@
                     "早餐": "錦繡河豚湯 (海雲台店) - 清甜解酒名店",
                     "早餐備註": "韓國最早出現砂鍋河豚湯的餐廳",
                     "上午行程": "臨時首都紀念館 ➔ 釜山塔/鑽石塔",
-                    "上午行程備註": "臨時首都紀念館(09:00，週一休息)-記錄了韓戰期間釜山作為臨時首都的歷史，曾是總統官邸\n釜山塔(10:00)-1973年落成啟用的釜山塔高度為120公尺，站上釜山塔觀景台，鄰近的建築一覽無遺，像是釜山港、廣安大橋、影島大橋、樂天百貨公司等知名景點\n可使用VBP B組 或是 KKday 購票，即買即用，成人232 兒童174",
+                    "上午行程備註": "從 錦繡河豚湯 到 臨時首都紀念館 車程大約40分鐘\n臨時首都紀念館(09:00，週一休息)-記錄了韓戰期間釜山作為臨時首都的歷史，曾是總統官邸\n從 臨時首都紀念館 到 釜山塔 車程大約10分鐘\n釜山塔(10:00)-1973年落成啟用的釜山塔高度為120公尺，站上釜山塔觀景台，鄰近的建築一覽無遺，像是釜山港、廣安大橋、影島大橋、樂天百貨公司等知名景點\n可使用VBP B組 或是 KKday 購票，即買即用，成人232 兒童174",
                     "午餐": "南浦洞補吃清單 (補吃 Day 2 沒吃到的)",
                     "午餐備註": "李在模披薩 or 洪祖豬腳 or 老奶奶伽倻小麥冷麵 or Others\n豚笑-南浦店 需要在早上10點就先在catchtable做預約候位",
                     "下午行程": "Good ol' days 咖啡廳 ➔ 光復路時尚街 ➔ 富平罐頭市場 ➔ 國際市場",
                     "下午行程備註": "國際市場(買棉被-永一寢具)-源自韓戰後，聚集了許多從國外進口或美軍物資而得名，現在是充滿復古氛圍，販售小吃、雜貨、服飾等各種商品的地方\n富平罐頭市場-以販售罐頭商品起家，現已發展成有許多美食和特色小店的觀光景點\nGood ol’ days- 150 種釜山風景明信片；VBP 點飲料時，即依杯數贈送明信片",
                     "晚餐": "那家韓牛 (海雲台) - 豪華韓牛盛宴",
-                    "晚餐備註": "回到海雲台吃韓牛(需計入返程時間約 35 分鐘)。那家韓牛(10:30-22:00)-標榜只銷售1+等級的韓牛，全程都有人幫忙燒烤及教你要怎麼搭配，也會看客人的速度去烤肉。https://missbusan.com/koreabeef-2/\n🔖肋條갈비살 ₩17900/100g、🔖肋眼등심 ₩19900/200g、🔖橫膈膜안거미 ₩29000/100g(每頭牛僅有300-400g的稀有部位)",
+                    "晚餐備註": "從 國際市場 到 那家韓牛 (海雲台) 車程大約30分鐘\n回到海雲台吃韓牛。那家韓牛(10:30-22:00)-標榜只銷售1+等級的韓牛，全程都有人幫忙燒烤及教你要怎麼搭配，也會看客人的速度去烤肉。https://missbusan.com/koreabeef-2/\n🔖肋條갈비살 ₩17900/100g、🔖肋眼등심 ₩19900/200g、🔖橫膈膜안거미 ₩29000/100g(每頭牛僅有300-400g的稀有部位)",
                     "晚上行程": "海雲台最後巡禮與打包",
                     "晚上行程備註": "漫步海雲台",
                     "雨天備案": "全日樂天百貨光復店與南浦地下街購物。"
@@ -258,15 +262,15 @@
                     "早餐": "Working Holiday Brunch Cafe (海景早午餐)",
                     "早餐備註": "早上8：00開始營業。海景第一排,假日拿鐵和法式吐司都厲害",
                     "上午行程": "MUSEUM 1 (停留 1.5 小時 / VBP B組)",
-                    "上午行程備註": "現代藝術博物館。VBP B組 ₩18000，KKDAY購票 成人313，小孩226 https://ppt.cc/fLCA3x",
+                    "上午行程備註": "從 Working Holiday Brunch Cafe 到 MUSEUM 1 車程大約10分鐘\n現代藝術博物館。VBP B組 ₩18000，KKDAY購票 成人313，小孩226 https://ppt.cc/fLCA3x",
                     "午餐": "新世界百貨 Centum City 美食街 (自由選擇)",
                     "午餐備註": "自由選擇想要吃什麼種類的美食\n新世界百貨先到外國顧客服務中心(B1 or 3F)辦會員卡享優惠換飲料\nB1服務櫃台位置在\"運動 / 休閒品牌\"附近，靠近 Mizuno、Converse等位置\n退稅位置在3F - Under Armour旁邊的退稅 or B2置物櫃(halff咖啡店旁)這邊的退稅機也可以用\n會員卡的話，每個月可以有5次消費95折優惠⁣，首次辦卡可再換 2 杯飲品\n9樓有免費的侏羅紀公園⁣，恐龍造景與大空間全部免費",
                     "下午行程": "新世界百貨(含藍瓶咖啡) ➔ Spa Land 汗蒸幕 (VBP A組)",
                     "下午行程備註": "新世界百貨B1F-藍瓶釜山新世界快閃咖啡廳\nSpa Land Centum City汗蒸幕。KKDAY購票 一人442 https://ppt.cc/fWGskx\n一次性入場費最多可使用 4 小時，超出時間需加收每小時 5,000 韓元的費用\n如果在 SPA LAND 內的消費金額超過 10,000 韓元 (不含入場費)，使用時長可延長至 6 小時\n8 歲及以上人士可入場，8 至 13 歲之間的兒童必須由同性別的監護人陪同",
                     "晚餐": "廣安里餐廳 or 百貨內餐廳(雨備)",
-                    "晚餐備註": "廣安里餐廳選擇",
+                    "晚餐備註": "從 新世界百貨 到 廣安里星巴克 車程大約10分鐘\n廣安里餐廳選擇",
                     "晚上行程": "漫步廣安里",
-                    "晚上行程備註": "廣安里逛街、Millac the Market",
+                    "晚上行程備註": "廣安里逛街、Millac the Market\n從 廣安里星巴克 到 海雲台飯店 車程大約15分鐘",
                     "雨天備案": "完全室內行程，無需變動。"
                 },
                 {
@@ -281,7 +285,7 @@
                     "午餐": "海雲台商圈隨意挑選",
                     "午餐備註": "海雲台餐廳美食自由選擇",
                     "下午行程": "海雲台沙灘散步 ➔ 16:00 專車出發機場",
-                    "下午行程備註": "海雲台沙灘散步、返回飯店拿行李\n16:00 出發前往機場、17:00 辦理退稅、登機\n司機將自指定接送時間起等候30分鐘",
+                    "下午行程備註": "海雲台沙灘散步、返回飯店拿行李\n16:00 出發前往機場、17:00 辦理退稅、登機\n司機將自指定接送時間起等候30分鐘\n從 海雲台飯店 到 金海機場 車程大約40分鐘",
                     "晚餐": "金海機場內用餐",
                     "晚餐備註": "金海機場自由選擇",
                     "晚上行程": "20:00 起飛返台 (CI 187)",
@@ -493,8 +497,8 @@
 
             // Clean up function
             const clean = (str) => str ? str.replace(/"/g, '').trim() : '';
-            const cleanType = (str) => str ? str.replace(/^\\d+\\./, '').trim() : '';
-            const cleanArea = (str) => str ? str.replace(/^\\d+\\./, '').trim() : '';
+            const cleanType = (str) => str ? str.replace(/^\d+\./, '').trim() : '';
+            const cleanArea = (str) => str ? str.replace(/^\d+\./, '').trim() : '';
 
             // Mapping based on observe columns:
             // 0: Type, 1: Interest, 2: Area, 3: Name, 4: KoreanName, 5: Hours, 6: VBP, 7: Remarks
@@ -547,6 +551,16 @@
             red: { border: 'border-red-500', text: 'text-red-500', bg: 'bg-red-50', iconBg: 'bg-red-100' },
             purple: { border: 'border-purple-500', text: 'text-purple-500', bg: 'bg-purple-50', iconBg: 'bg-purple-100' }
         };
+
+        const iconMap = {
+            bf: 'clock',
+            morning: 'map-pin',
+            lunch: 'utensils',
+            afternoon: 'map-pin',
+            dinner: 'utensils',
+            night: 'clock'
+        };
+
         const NotePage = ({ travelNotes, setTravelNotes }) => {
             const [form, setForm] = useState({ date: '', location: '', content: '' });
 
@@ -816,70 +830,6 @@
             '甘川洞': { lat: 35.0974, lon: 129.0106 },
         };
 
-        const formatTextWithLinks = (text) => {
-            if (!text) return null;
-            // Update regex to only match valid URL characters (excluding Chinese/full-width punctuation)
-            const parts = text.split(/(https?:\/\/[a-zA-Z0-9-._~:/?#\[\]@!$&'()*+,;=%]+)/g);
-            return parts.map((part, index) => {
-                if (part.match(/^https?:\/\//)) {
-                    return (
-                        <a
-                            key={index}
-                            href={part}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:text-blue-700 underline decoration-blue-500/30 hover:decoration-blue-700/50 break-all transition-colors"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {part}
-                        </a>
-                    );
-                }
-                return part;
-            });
-        };
-
-        const ScheduleItem = ({ label, content, iconName, color, itemKey, fixedRemark, activeDay, remarks, handleRemarkChange }) => {
-            if (!content) return null;
-            const remarkKey = `day-${activeDay}-${itemKey}`;
-            const remark = remarks[remarkKey] || '';
-            const styles = colorMap[color] || colorMap.blue;
-
-            return (
-                <div
-                    className={`mb-4 p-4 rounded-xl border-l-4 transition-all duration-300 bg-white ${styles.border} shadow-sm`}
-                >
-                    <div className="flex items-start gap-3">
-                        <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-1 text-xs font-bold uppercase tracking-wider text-gray-500">
-                                <LucideIcon name={iconName} className="w-4 h-4" />
-                                {label}
-                            </div>
-                            <div className="text-base leading-relaxed break-words text-gray-800 font-semibold">
-                                {content}
-                            </div>
-                            <div className="mt-3 relative">
-                                {fixedRemark ? (
-                                    <div className="w-full text-sm p-3 rounded-lg border bg-gray-100 border-gray-200 text-gray-500 italic select-text cursor-text whitespace-pre-wrap">
-                                        {formatTextWithLinks(fixedRemark)}
-                                    </div>
-                                ) : (
-                                    <textarea
-                                        value={remark}
-                                        onChange={(e) => handleRemarkChange(activeDay, itemKey, e.target.value)}
-                                        placeholder="備註..."
-                                        className="w-full text-sm p-3 rounded-lg border focus:ring-2 focus:outline-none transition-all resize-none overflow-hidden bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-300 focus:ring-blue-100 text-gray-700"
-                                        rows={Math.max(1, remark.split('\n').length)}
-                                        style={{ minHeight: '44px' }}
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
-        };
-
         const App = () => {
             const [selectedRegion, setSelectedRegion] = useState('金海機場');
             const [activeDay, setActiveDay] = useState(-1); // -1 = 資訊頁
@@ -1027,6 +977,70 @@
             }, [searchTerm]);
 
             const currentDay = tripData.詳細行程[activeDay];
+
+            const formatTextWithLinks = (text) => {
+                if (!text) return null;
+                // Update regex to only match valid URL characters (excluding Chinese/full-width punctuation)
+                const parts = text.split(/(https?:\/\/[a-zA-Z0-9-._~:/?#\[\]@!$&'()*+,;=%]+)/g);
+                return parts.map((part, index) => {
+                    if (part.match(/^https?:\/\//)) {
+                        return (
+                            <a
+                                key={index}
+                                href={part}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-500 hover:text-blue-700 underline decoration-blue-500/30 hover:decoration-blue-700/50 break-all transition-colors"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                {part}
+                            </a>
+                        );
+                    }
+                    return part;
+                });
+            };
+
+            const ScheduleItem = ({ label, content, iconName, color, itemKey, fixedRemark }) => {
+                if (!content) return null;
+                const remarkKey = `day-${activeDay}-${itemKey}`;
+                const remark = remarks[remarkKey] || '';
+                const styles = colorMap[color] || colorMap.blue;
+
+                return (
+                    <div
+                        className={`mb-4 p-4 rounded-xl border-l-4 transition-all duration-300 bg-white ${styles.border} shadow-sm`}
+                    >
+                        <div className="flex items-start gap-3">
+                            <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2 mb-1 text-xs font-bold uppercase tracking-wider text-gray-500">
+                                    <LucideIcon name={iconName} className="w-4 h-4" />
+                                    {label}
+                                </div>
+                                <div className="text-base leading-relaxed break-words text-gray-800 font-semibold">
+                                    {content}
+                                </div>
+                                <div className="mt-3 relative">
+                                    {fixedRemark ? (
+                                        <div className="w-full text-sm p-3 rounded-lg border bg-gray-100 border-gray-200 text-gray-500 italic select-text cursor-text whitespace-pre-wrap">
+                                            {formatTextWithLinks(fixedRemark)}
+                                        </div>
+                                    ) : (
+                                        <textarea
+                                            value={remark}
+                                            onChange={(e) => handleRemarkChange(activeDay, itemKey, e.target.value)}
+                                            placeholder="備註..."
+                                            className="w-full text-sm p-3 rounded-lg border focus:ring-2 focus:outline-none transition-all resize-none overflow-hidden bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-300 focus:ring-blue-100 text-gray-700"
+                                            rows={Math.max(1, remark.split('\n').length)}
+                                            style={{ minHeight: '44px' }}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                );
+            };
 
 
 
@@ -1623,12 +1637,12 @@
 
                                 {/* Schedule List */}
                                 <div className="space-y-1">
-                                    <ScheduleItem label="早餐" content={currentDay?.早餐} iconName="clock" color="yellow" itemKey="bf" fixedRemark={currentDay?.早餐備註} activeDay={activeDay} remarks={remarks} handleRemarkChange={handleRemarkChange} />
-                                    <ScheduleItem label="上午行程" content={currentDay?.上午行程} iconName="map-pin" color="blue" itemKey="morning" fixedRemark={currentDay?.上午行程備註} activeDay={activeDay} remarks={remarks} handleRemarkChange={handleRemarkChange} />
-                                    <ScheduleItem label="午餐" content={currentDay?.午餐} iconName="utensils" color="green" itemKey="lunch" fixedRemark={currentDay?.午餐備註} activeDay={activeDay} remarks={remarks} handleRemarkChange={handleRemarkChange} />
-                                    <ScheduleItem label="下午行程" content={currentDay?.下午行程} iconName="map-pin" color="indigo" itemKey="afternoon" fixedRemark={currentDay?.下午行程備註} activeDay={activeDay} remarks={remarks} handleRemarkChange={handleRemarkChange} />
-                                    <ScheduleItem label="晚餐" content={currentDay?.晚餐} iconName="utensils" color="red" itemKey="dinner" fixedRemark={currentDay?.晚餐備註} activeDay={activeDay} remarks={remarks} handleRemarkChange={handleRemarkChange} />
-                                    <ScheduleItem label="晚上行程" content={currentDay?.晚上行程} iconName="clock" color="purple" itemKey="night" fixedRemark={currentDay?.晚上行程備註} activeDay={activeDay} remarks={remarks} handleRemarkChange={handleRemarkChange} />
+                                    <ScheduleItem label="早餐" content={currentDay?.早餐} iconName="clock" color="yellow" itemKey="bf" fixedRemark={currentDay?.早餐備註} />
+                                    <ScheduleItem label="上午行程" content={currentDay?.上午行程} iconName="map-pin" color="blue" itemKey="morning" fixedRemark={currentDay?.上午行程備註} />
+                                    <ScheduleItem label="午餐" content={currentDay?.午餐} iconName="utensils" color="green" itemKey="lunch" fixedRemark={currentDay?.午餐備註} />
+                                    <ScheduleItem label="下午行程" content={currentDay?.下午行程} iconName="map-pin" color="indigo" itemKey="afternoon" fixedRemark={currentDay?.下午行程備註} />
+                                    <ScheduleItem label="晚餐" content={currentDay?.晚餐} iconName="utensils" color="red" itemKey="dinner" fixedRemark={currentDay?.晚餐備註} />
+                                    <ScheduleItem label="晚上行程" content={currentDay?.晚上行程} iconName="clock" color="purple" itemKey="night" fixedRemark={currentDay?.晚上行程備註} />
                                 </div>
 
                                 {/* Rain Plan */}
