@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
@@ -16,6 +16,13 @@
 
     <!-- Babel for JSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+        Babel.registerPreset("react-classic", {
+            presets: [
+                [Babel.availablePresets["react"], { runtime: "classic" }]
+            ]
+        });
+    </script>
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -70,7 +77,7 @@
 <body>
     <div id="root"></div>
 
-    <script type="text/babel">
+    <script type="text/babel" data-presets="react-classic,env">
         const { useState, useEffect, useMemo } = React;
 
         // SVG 圖示定義
